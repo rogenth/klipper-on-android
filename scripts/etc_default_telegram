@@ -1,6 +1,6 @@
 #  Configuration for /etc/init.d/telegram
 
-TELEGRAM_USER=android
+TELEGRAM_USER=print3D
 TELEGRAM_CONFIG=/home/$TELEGRAM_USER/printer_data/config/telegram.conf
 TELEGRAM_LOG=/home/$TELEGRAM_USER/printer_data/logs/telegram.log
 TELEGRAM_EXEC=/home/$TELEGRAM_USER/moonraker-telegram-bot-env/bin/python
