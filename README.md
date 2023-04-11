@@ -76,7 +76,6 @@
   sudo wget -O /etc/default/moonraker https://raw.githubusercontent.com/rogenth/klipper-on-android/main/scripts/etc_default_moonraker
   sudo wget -O /etc/init.d/moonraker https://raw.githubusercontent.com/rogenth/klipper-on-android/main/scripts/etc_init.d_moonraker
   sudo wget -O /usr/local/bin/xterm https://raw.githubusercontent.com/rogenth/klipper-on-android/main/scripts/usr_local_bin_xterm
-  sudo wget -O /data/data/com.termux/files/boot/start-klipper-termux https://raw.githubusercontent.com/rogenth/klipper-on-android/main/scripts/start-klipper-termux
   
   sudo chmod +x /etc/init.d/klipper 
   sudo chmod +x /etc/init.d/moonraker 
@@ -85,6 +84,12 @@
   sudo update-rc.d klipper defaults
   sudo update-rc.d moonraker defaults
   ```
+- Copy the boot script for Termux:
+  ```bash
+  mkdir /data/data/com.termux/boot
+  sudo wget -O /data/data/com.termux/boot/start-klipper-termux https://raw.githubusercontent.com/rogenth/klipper-on-android/main/scripts/start-klipper-termux
+  ```
+  
 - Stop the Debian container.
 - Start XServer XSDL.
     - One time setup: 
