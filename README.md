@@ -86,7 +86,7 @@
   ```
 - Copy the boot script for Termux:
   ```bash
-  mkdir /data/data/com.termux/boot
+  mkdir /data/data/com.termux/files/home/.termux/boot
   sudo wget -O /data/data/com.termux/files/home/.termux/boot/start-klipper-termux https://raw.githubusercontent.com/rogenth/klipper-on-android/main/scripts/start-klipper-termux
   ```
   
