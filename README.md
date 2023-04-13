@@ -9,7 +9,7 @@
 I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864 but I wasn't so lucky with my Oneplus X as Linux Deploy couldn't install Debian, so I followed the original tutorial and added a debian installation through Termux.
 
 ## Requirements
-- A rooted Android device (Magisk) with the following installed:
+- A rooted Android device (see Magisk) with the following installed:
   - Termux app: https://f-droid.org/packages/com.termux/
   - XServer-XSDL-1.20.51 app: https://sourceforge.net/projects/libsdl-android/files/apk/XServer-XSDL/
   - Octo4a app: https://github.com/feelfreelinux/octo4a
