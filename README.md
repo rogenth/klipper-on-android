@@ -48,10 +48,11 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   usermod -aG sudo print3D
   ```
   
-- Test sudo:
+- Test sudo and add a password:
   ```bash
   sudo su
   su print3D
+  passwd
   ```
     
 - Install and start SSH:
@@ -62,7 +63,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   ```
 - From there you can continue on your phone and pretty much follow the instructions as in Linux Deploy versions.
  
-- SSH into the container:
+- SSH into the container (from your PC Terminal or other device `ssh -p 22 print3D@YOUR_DEVICE_IP`):
   ```bash
   sudo apt install git
   git clone https://github.com/th33xitus/kiauh.git
