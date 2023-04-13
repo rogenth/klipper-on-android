@@ -96,7 +96,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
 - Use XFTP or command line to delete the config files:
   ```bash
   cd /home/print3D/printer_data/config/
-  ```bash
+  ```
   
 - Download the configuration files:
   ```bash
@@ -104,7 +104,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   sudo wget -P /home/print3D/printer_data/config/ https://raw.githubusercontent.com/gaifeng8864/klipper-on-android/main/homing_override.cfg
   sudo wget -P /home/print3D/printer_data/config/ https://raw.githubusercontent.com/gaifeng8864/klipper-on-android/main/moonraker.conf
   sudo wget -P /home/print3D/printer_data/config/ https://raw.githubusercontent.com/gaifeng8864/klipper-on-android/main/printer.cfg
-  ```bash
+  ```
   
   - Replace printer.cfg by the parameters of your printer now or later.
   
