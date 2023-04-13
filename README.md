@@ -11,7 +11,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
 ## Requirements
 - A rooted Android device (Magisk) with the following installed:
   - Termux app: https://f-droid.org/packages/com.termux/
-  - XServer app: https://play.google.com/store/apps/details?id=x.org.server
+  - XServer-XSDL-1.20.51 app: https://sourceforge.net/projects/libsdl-android/files/apk/XServer-XSDL/
   - Octo4a app: https://github.com/feelfreelinux/octo4a
 - An OTG+Charge cable up and running for the same device ( please check this video for reference: https://www.youtube.com/watch?v=8afFKyIbky0)
 - An already flashed printer using Klipper firmware. 
