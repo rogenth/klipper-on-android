@@ -106,7 +106,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   sudo wget -P /home/print3D/printer_data/config/ https://raw.githubusercontent.com/gaifeng8864/klipper-on-android/main/printer.cfg
   ```
   
-  - Replace printer.cfg by the parameters of your printer now or later.
+  - Replace `printer.cfg` by the parameters of your printer now or later, remember to add `/dev/ttyACM0`, `/dev/ttyUSB0` or `/data/data/com.octo4a/files/serialpipe` under `[mcu]` on the configuration file.
   
 - Install the init and xterm scripts from this gist:  
   ```bash
