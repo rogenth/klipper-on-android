@@ -53,6 +53,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   sudo su
   su print3D
   passwd
+  sudo usermod -a -G aid_inet,aid_net_raw root #didnt test without it
   ```
     
 - Install and start SSH:
@@ -92,6 +93,21 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
     # or
     sudo chmod 777 /data/data/com.octo4a/files/serialpipe
     ```
+- Use XFTP or command line to delete the config files:
+  ```bash
+  cd /home/print3D/printer_data/config/
+  ```bash
+  
+- Download the configuration files:
+  ```bash
+  sudo wget -P /home/print3D/printer_data/config/ https://raw.githubusercontent.com/gaifeng8864/klipper-on-android/main/fluidd.cfg
+  sudo wget -P /home/print3D/printer_data/config/ https://raw.githubusercontent.com/gaifeng8864/klipper-on-android/main/homing_override.cfg
+  sudo wget -P /home/print3D/printer_data/config/ https://raw.githubusercontent.com/gaifeng8864/klipper-on-android/main/moonraker.conf
+  sudo wget -P /home/print3D/printer_data/config/ https://raw.githubusercontent.com/gaifeng8864/klipper-on-android/main/printer.cfg
+  ```bash
+  
+  - Replace printer.cfg by the parameters of your printer now or later.
+  
 - Install the init and xterm scripts from this gist:  
   ```bash
   sudo wget -O /etc/default/klipper https://raw.githubusercontent.com/rogenth/klipper-on-android/main/scripts/etc_default_klipper
