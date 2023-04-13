@@ -40,7 +40,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   apt update
   apt upgrade
   apt install sudo vim wget
-  adduser print3D ---force-badname
+  adduser print3D --force-badname
   passwd
   ```
 - Get sudo access:
