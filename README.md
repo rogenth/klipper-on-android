@@ -129,7 +129,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
 - Then you can set up Termux Boot in order to autostart the container and klipper screen. I added a delay, but I haven't test it yet. If you want to manually start the container, use './start-klipper-container' on Termux, just make sure to also start manually the XServer app.
 
 ## Misc
-You can start/stop Klipper and Moonraker manually by using the `service` command (eg: 'sudo service klipper start`).  
+You can start/stop Klipper and Moonraker manually by using the `service` command (eg: `sudo service klipper start`).  
 Logs can be found in `/home/android/klipper_logs`.
 
 ## Telegram Bot
