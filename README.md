@@ -24,7 +24,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   ```bash
   pkg update
   pkg upgrade
-  pkg install wget openssl-tool proot tsu -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh
+  pkg install wget openssl-tool termux-auth proot tsu -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh
   su
   exit
   sudo
