@@ -42,32 +42,31 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   adduser print3D ---force-badname
   passwd
   ```
- - Get sudo access:
-   ```bash
-   vi /etc/sudoers #check vim tutorial, , :x! for saving Add line: print3D ALL=(ALL) ALL
-   usermod -aG sudo print3D
+- Get sudo access:
+  ```bash
+  vi /etc/sudoers #check vim tutorial, , :x! for saving Add line: print3D ALL=(ALL) ALL
+  usermod -aG sudo print3D
   ```
   
- - Test sudo:
-    ```bash
-    sudo su
-    su print3D
-    ```
+- Test sudo:
+  ```bash
+  sudo su
+  su print3D
+  ```
     
- - Install and start SSH:
-    ```bash
-     wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/SSH/Apt/ssh-apt.sh --no-check-certificate && bash ssh-apt.shsh
-     #Start SSH
-     /home/print3D# /etc/init.d/ssh start
-    ```
-    
- - From there you can continue on your phone and pretty much follow the instructions as in Linux Deploy versions.
+- Install and start SSH:
+  ```bash
+  wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/SSH/Apt/ssh-apt.sh --no-check-certificate && bash ssh-apt.shsh
+  #Start SSH
+  /home/print3D# /etc/init.d/ssh start
+  ```
+- From there you can continue on your phone and pretty much follow the instructions as in Linux Deploy versions.
  
-  - SSH into the container:
-     ```bash
-     sudo apt install git
-     git clone https://github.com/th33xitus/kiauh.git
-    ```
+- SSH into the container:
+  ```bash
+  sudo apt install git
+  git clone https://github.com/th33xitus/kiauh.git
+  ```
  
 - Install Klipper, Moonraker, Mainsail (or Fluidd), and KlipperScreen:
   ```bash 
