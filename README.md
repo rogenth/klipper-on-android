@@ -34,7 +34,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   sudo ./start-debian.sh
   ```
 
-- Add your username, add a password and upgrade packages:
+- Add your username (in this case `print3D`), add a password and upgrade packages:
   ```bash
   apt update
   apt upgrade
