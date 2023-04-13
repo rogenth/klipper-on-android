@@ -59,7 +59,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
     
 - Install and start SSH:
   ```bash
-  wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/SSH/Apt/ssh-apt.sh --no-check-certificate && bash ssh-apt.shsh
+  wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/SSH/Apt/ssh-apt.sh --no-check-certificate && bash ssh-apt.sh
   #Start SSH
   /home/print3D# /etc/init.d/ssh start
   ```
