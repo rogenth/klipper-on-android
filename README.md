@@ -68,6 +68,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
  
 - SSH into the container (from your PC Terminal or other device `ssh -p 22 print3D@YOUR_DEVICE_IP`):
   ```bash
+  su print3D #just If continuing from Termux
   sudo apt install git
   git clone https://github.com/th33xitus/kiauh.git
   ```
