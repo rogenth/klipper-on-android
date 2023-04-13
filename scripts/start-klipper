@@ -1,0 +1,11 @@
+/etc/init.d/ssh start &
+#ngnix
+/etc/init.d/nginx start &
+#klipper
+/etc/init.d/klipper start &
+#moonraker
+/etc/init.d/moonraker start &
+#klipperscreen
+export DISPLAY=:0 
+sleep 10
+/usr/local/bin/xterm
