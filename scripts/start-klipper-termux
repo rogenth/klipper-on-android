@@ -1,7 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/sh
 termux-wake-lock
+cd
+am start --user 0 x.org.server/x.org.server.MainActivity
+sleep 10
 sudo ./start-debian.sh
-/etc/init.d/ssh start
-service klipper start
-service moonraker start
-/etc/init.d/nginx start
