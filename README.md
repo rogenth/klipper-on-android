@@ -57,11 +57,12 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   sudo usermod -a -G aid_inet,aid_net_raw root #didnt test without it
   ```
     
-- Install and start SSH:
+- Get back into root: install and start SSH:
   ```bash
+  sudo su
   wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/SSH/Apt/ssh-apt.sh --no-check-certificate && bash ssh-apt.sh
   #Start SSH
-  /home/print3D# /etc/init.d/ssh start
+  /etc/init.d/ssh start
   ```
 - From there you can continue on your phone and pretty much follow the instructions as in Linux Deploy versions.
  
