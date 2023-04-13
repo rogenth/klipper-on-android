@@ -21,18 +21,18 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
  
 ## Setup Instructions
 - Initialize Termux, acquire sudo, choose a password and install the Debian container:
- ```bash
+  ```bash
   Pkg update
   Pkg upgrade
   pkg install wget openssl-tool proot tsu -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh
   su
   sudo
   passwd
-```
+  ```
 - Boot Debian, in this case we use print3D
-```bash
+  ```bash
   sudo ./start-debian.sh
-```
+  ```
 
 - Add your username, add a password and upgrade packages:
   ```bash
@@ -44,7 +44,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   ```
 - Get sudo access:
   ```bash
-  vi /etc/sudoers #check vim tutorial, , :x! for saving Add line: print3D ALL=(ALL) ALL
+  vi /etc/sudoers #check vim tutorial, :x! for saving Add line: print3D ALL=(ALL) ALL
   usermod -aG sudo print3D
   ```
   
