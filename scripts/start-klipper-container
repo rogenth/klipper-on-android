@@ -27,7 +27,7 @@ command+=" PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/us
 command+=" TERM=$TERM"
 command+=" LANG=C.UTF-8"
 #command+=" /bin/bash --login"
-command+=" /bin/bash /root/start-klipper.sh"
+command+=" /bin/bash /root/start-klipper"
 com="$@"
 if [ -z "$1" ];then
     exec $command
