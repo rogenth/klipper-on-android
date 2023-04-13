@@ -82,20 +82,15 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
     - Run Octo4a and let it install OctoPrint (optionally tap the Stop button once it's done installing).
     - Make sure Octo4a sees your printer (it will be listed with a checked-box next to it).
       - There will be a prompt in your android device asking for permission to connect to your printer if detected.
-    - Now you need to go back to Linux Deploy and edit the container settings:
-      - **MOUNTS**:
-          - **Enable**: `yes`
-          - **Mount points**: press on the "+" button
-            - Source: `/data/data/com.octo4a/files`
-            - Target: `/home/android/octo4a`
-    - `/home/android/octo4a/serialpipe` is the serial port you need to use in your `printer.cfg`
+    - `/data/data/com.octo4a/files/serialpipe` is the serial port you need to use in your `printer.cfg`
 - Make the serial device accessible to Klipper (on both Termux and Debian Container):
     ```bash
+    #from Termux and Debian:
     sudo chmod 777 /dev/ttyACM0
-    # or 
+    # or
     sudo chmod 777 /dev/ttyUSB0
-    # or 
-    sudo chmod 777 /home/android/octo4a/serialpipe
+    # or
+    sudo chmod 777 /data/data/com.octo4a/files/serialpipe
     ```
 - Install the init and xterm scripts from this gist:  
   ```bash
