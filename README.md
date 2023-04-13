@@ -29,7 +29,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   sudo
   passwd
   ```
-- Boot Debian, in this case we use print3D
+- Boot Debian
   ```bash
   sudo ./start-debian.sh
   ```
