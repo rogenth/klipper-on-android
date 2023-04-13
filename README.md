@@ -111,12 +111,15 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   sudo update-rc.d klipper defaults
   sudo update-rc.d moonraker defaults
   ```
-- Copy the boot script for Termux:
+- Copy the boot script on Termux (not Debian):
   ```bash
   mkdir /data/data/com.termux/files/home/.termux/boot
   sudo wget -O /data/data/com.termux/files/home/.termux/boot/start-termux https://raw.githubusercontent.com/rogenth/klipper-on-android/main/scripts/start-termux
   sudo wget -O /data/data/com.termux/files/home/start-klipper-container https://raw.githubusercontent.com/rogenth/klipper-on-android/main/scripts/start-klipper-container
   sudo wget -O /data/data/com.termux/files/home/debian-fs/root/start-klipper https://raw.githubusercontent.com/rogenth/klipper-on-android/main/scripts/start-klipper
+  sudo chmod +x /data/data/com.termux/files/home/.termux/boot/start-termux
+  sudo chmod +x /data/data/com.termux/files/home/start-klipper-container
+  sudo chmod +x /data/data/com.termux/files/home/debian-fs/root/start-klipper
   ```
   
 - Stop the Debian/Klipper container.
@@ -127,10 +130,10 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
 - Start the Debian/Klipper container "./start-klipper-container".
 - KlipperScreen should appear in XServer XSDL and Mainsail and/or Fluidd should be accesible using your Android device's IP address in a browser.
 
-- Then you can set up Termux Boot in order to autostart the container and klipper screen. I added a delay, but I haven't test it yet. If you want to manually start the container, use "./start-klipper-container" on Termux, just make sure to also start manually the XServer app.
+- Then you can set up Termux Boot in order to autostart the container and klipper screen. I added a delay, but I haven't test it yet. If you want to manually start the container, use './start-klipper-container' on Termux, just make sure to also start manually the XServer app.
 
 ## Misc
-You can start/stop Klipper and Moonraker manually by using the `service` command (eg: `sudo service start klipper`).  
+You can start/stop Klipper and Moonraker manually by using the `service` command (eg: 'sudo service klipper start`).  
 Logs can be found in `/home/android/klipper_logs`.
 
 ## Telegram Bot
