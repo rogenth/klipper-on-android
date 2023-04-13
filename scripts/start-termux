@@ -3,4 +3,4 @@ termux-wake-lock
 cd
 am start --user 0 x.org.server/x.org.server.MainActivity
 sleep 10
-sudo ./start-klipper.sh
+sudo ./start-klipper-container.sh
