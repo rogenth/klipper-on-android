@@ -83,7 +83,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   ```
   *Note: KlipperScreen in particular will take a very long time (tens of minutes).*  
 - Find your printer's serial device for use in Klipper's `printer.cfg`:  
-  It will likely be `/dev/ttyACM0` or `/dev/ttyUSB0`. Check if either of those appear/disappear under `/dev/` when plugging/unplugging your printer (Check using 'ls -al /dev/').  
+  It will likely be `/dev/ttyACM0` or `/dev/ttyUSB0`. Check if either of those appear/disappear under `/dev/` when plugging/unplugging your printer (Check using `ls -al /dev/`).  
   
   If you cannot find your printer in `/dev/`, then you can check Octo4a app which includes a custom implementation of the CH34x driver. IMPORTANT: You don't need to run OctoPrint within it so once in the main screen of the app just stop it if it's running. To do this:   
     - Install Octo4a from https://github.com/feelfreelinux/octo4a/releases
