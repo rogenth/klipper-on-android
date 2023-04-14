@@ -156,7 +156,7 @@ You can start/stop Klipper and Moonraker manually by using the `service` command
 Logs can be found in `/home/android/klipper_logs`.
 
 ## Telegram Bot
-You can find the instructions how to setup the Telegram Bot [here](https://github.com/rogenth/klipper-on-android/blob/main/telegram_instructions.md)
+You can find the instructions how to setup the Telegram Bot [here](https://github.com/rogenth/klipper-on-android/blob/main/telegram_instructions.md). You need to then modify `start-klipper` in the container and uncomment the Telegram start section: `/etc/init.d/telegram start`.
 
 ## Troubleshooting (ongoing section based on comments)
 - After a phone reboot you may need to grant access again to the serial pipe, through: `sudo chmod 777 /data/data/com.octo4a/files/serialpipe`. Make sure that Octo4a recognizes the phone. You may also try different drivers through the app.
