@@ -87,6 +87,8 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
     - Make sure Octo4a sees your printer (it will be listed with a checked-box next to it).
       - There will be a prompt in your android device asking for permission to connect to your printer if detected.
     - `/data/data/com.octo4a/files/serialpipe` is the serial port you need to use in your `printer.cfg`
+    - Modify later `start-klipper-container` from the Termux root directory and add `command+=" -b `/data/data/com.octo4a/files:/data/data/com.octo4a/files` around the `#uncomment` section in order to mount the implementation of Octo4a into the Debian/Klipper container.
+    
 - Make the serial device accessible to Klipper (on both Termux and Debian Container):
     ```bash
     #from Termux and Debian:
@@ -129,9 +131,11 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
 - Copy the boot script on Termux (not Debian):
   ```bash
   mkdir /data/data/com.termux/files/home/.termux/boot
+  
   sudo wget -O /data/data/com.termux/files/home/.termux/boot/start-termux https://raw.githubusercontent.com/rogenth/klipper-on-android/main/scripts/start-termux
   sudo wget -O /data/data/com.termux/files/home/start-klipper-container https://raw.githubusercontent.com/rogenth/klipper-on-android/main/scripts/start-klipper-container
   sudo wget -O /data/data/com.termux/files/home/debian-fs/root/start-klipper https://raw.githubusercontent.com/rogenth/klipper-on-android/main/scripts/start-klipper
+  
   sudo chmod +x /data/data/com.termux/files/home/.termux/boot/start-termux
   sudo chmod +x /data/data/com.termux/files/home/start-klipper-container
   sudo chmod +x /data/data/com.termux/files/home/debian-fs/root/start-klipper
@@ -155,6 +159,7 @@ Logs can be found in `/home/android/klipper_logs`.
 You can find the instructions how to setup the Telegram Bot [here](https://github.com/rogenth/klipper-on-android/blob/main/telegram_instructions.md)
 
 ## Troubleshooting (ongoing section based on comments)
+- After a phone reboot you may need to grant access again to the serial pipe, through: `sudo chmod 777 /data/data/com.octo4a/files/serialpipe`. Make sure that Octo4a recognizes the phone. You may also try different drivers through the app.
 - There might be the case that when accessing Mainsail through Browser, you get an error message and no connection to moonraker: mainsail Permission denied while connecting to upstream in `klipper_logs/mainsail_error.log`. To fix this you must change the file `/etc/nginx/nginx.conf`, change `user www-data;` to `user android;` 
 - If anyone is having network issues in the container as a non root user after a few minutes, you need to disable deep sleep/idle. You can do that by using this command in a shell (termux or adb doesn't matter): `dumpsys deviceidle disable`. You may also need this app: [Wake Lock - CPU Awake] (https://play.google.com/store/apps/details?id=com.dambara.wakelocker)
 - As per [ZerGo0](https://gist.github.com/ZerGo0) comments - The latest moonraker update seems to break a few things. There are some changes about the directory and file locations, but you can just sym link the new directories to the old ones using the included script: 
