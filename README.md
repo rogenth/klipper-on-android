@@ -27,7 +27,6 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   pkg install wget openssl-tool termux-auth proot tsu -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh
   su
   exit
-  sudo
   passwd
   ```
 - Boot Debian
@@ -163,6 +162,15 @@ Logs can be found in `/home/android/klipper_logs`.
 You can find the instructions how to setup the Telegram Bot [here](https://github.com/rogenth/klipper-on-android/blob/main/telegram_instructions.md). You need to then modify `start-klipper` in the container and uncomment the Telegram start section: `/etc/init.d/telegram start`.
 
 ## Troubleshooting (ongoing section based on comments)
+- You can also directly ssh into Termux for debugging. For that, start SSH and get the `USER`.
+  ```bash
+  sshd
+  whoami #USER
+  ```
+  Then SSH from another device:
+  ```bash
+  ssh -p 8022 USER@YOUR_DEVICE_IP
+  ```
 - After a phone reboot you may need to grant access again to the serial pipe, through: `sudo chmod 777 /data/data/com.octo4a/files/serialpipe`. Make sure that Octo4a recognizes the phone. You may also try different drivers through the app.
 - There might be the case that when accessing Mainsail through Browser, you get an error message and no connection to moonraker: mainsail Permission denied while connecting to upstream in `klipper_logs/mainsail_error.log`. To fix this you must change the file `/etc/nginx/nginx.conf`, change `user www-data;` to `user android;` 
 - If anyone is having network issues in the container as a non root user after a few minutes, you need to disable deep sleep/idle. You can do that by using this command in a shell (termux or adb doesn't matter): `dumpsys deviceidle disable`. You may also need this app: [Wake Lock - CPU Awake] (https://play.google.com/store/apps/details?id=com.dambara.wakelocker)
