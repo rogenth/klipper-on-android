@@ -1,10 +1,10 @@
 # Using Android to run Klipper, Moonraker, Mainsail/Fuidd, and KlipperScreen with Termux
 ## Alternative Version with Linux Deploy: https://github.com/gaifeng8864/klipper-on-android (uses fluidd and simplifies the script creation)
-### Disclaimer: this is an ongoing work, still some changes pending. will try to update it when i can.
+### Disclaimer: this is an ongoing work, still some changes pending. I am not responsible if you brick your device or cause a fire. Make sure to decide to dispose of the battery of your phone or not (See https://www.youtube.com/watch?v=7f8SliNGeDM&t)
 #### Fork from https://github.com/d4rk50ul1/klipper-on-android
 #### Thanks to https://github.com/gaifeng8864/klipper-on-android
 #### Original work by @RyanEwen (https://gist.github.com/RyanEwen/ae81fc48ad00397f1026915f0e6beed9)
-#### Current Setup: Ender 3 Pro (SKR MINI E3 V2.0) with Klipper Firmware + Oneplus X / Pixel 5 running Klipper + Moonraker+Fluidd + Klipperscreen
+#### Current Setup: Ender 3 Pro (SKR MINI E3 V2.0) with Klipper Firmware + Oneplus X (Lineage 18.1/Magisk) / Pixel 5 (Stock/Magisk) running Klipper + Moonraker+Fluidd + Klipperscreen
 
 I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864 but I wasn't so lucky with my Oneplus X as Linux Deploy couldn't install Debian, so I followed the original tutorial and added a debian installation through Termux.
 
