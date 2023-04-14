@@ -18,6 +18,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   - For reference : https://3dprintbeginner.com/how-to-install-klipper-on-sidewinder-x2/
 - Init scripts for Klipper and Moonraker (scripts folder).
 - XTerm script for KlipperScreen (scripts folder).
+- Optional: WinSCP (https://winscp.net/eng/download.php) for file exploring and Putty (https://www.putty.org/) for SSH.
  
 ## Setup Instructions
 - Initialize Termux, acquire sudo, choose a password and install the Debian container:
@@ -101,7 +102,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
     # or
     sudo chmod 777 /data/data/com.octo4a/files/serialpipe
     ```
-- Use XFTP or command line to delete the config files:
+- Use WinSCP, XFTP or command line to delete the config files:
   ```bash
   cd /home/print3D/printer_data/config/
   ```
