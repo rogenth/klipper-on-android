@@ -35,7 +35,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   sudo ./start-debian.sh
   ```
 
-- Add your username (in this case `print3D`), add a password and upgrade packages:
+- Add your username (in this case `print3D`), add a root password and upgrade packages:
   ```bash
   apt update
   apt upgrade
@@ -45,21 +45,25 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
   ```
 - Get sudo access:
   ```bash
-  vi /etc/sudoers #check vim tutorial, :x! for saving Add line: print3D ALL=(ALL) ALL
+  vi /etc/sudoers #Check vim tutorial, :x! for saving, Add this line: print3D ALL=(ALL) ALL under user
   usermod -aG sudo print3D
   ```
   
-- Test sudo and add a password:
+- Test sudo, add a password and log into `print3D`:
   ```bash
   sudo su
   su print3D
-  passwd
-  sudo usermod -a -G aid_inet,aid_net_raw root #didnt test without it
+  ```
+  
+  Now on logged into `print3D`,  fix permissions and test sudo
+  ```bash
+  sudo usermod -a -G aid_inet,aid_net_raw root #Permissions Fix just in case
   ```
     
 - Get back into root: install and start SSH:
   ```bash
   sudo su
+  cd ~
   wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/SSH/Apt/ssh-apt.sh --no-check-certificate && bash ssh-apt.sh
   #Start SSH
   /etc/init.d/ssh start
@@ -68,7 +72,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
  
 - SSH into the container (from your PC Terminal or other device `ssh -p 22 print3D@YOUR_DEVICE_IP`):
   ```bash
-  su print3D #just If continuing from Termux
+  su print3D #just if continuing from Termux
   sudo apt install git
   git clone https://github.com/th33xitus/kiauh.git
   ```
