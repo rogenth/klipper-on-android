@@ -102,10 +102,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
     # or
     sudo chmod 777 /data/data/com.octo4a/files/serialpipe
     ```
-- Use WinSCP, XFTP or command line to delete the config files:
-  ```bash
-  cd /home/print3D/printer_data/config/
-  ```
+- Use WinSCP, XFTP or command line to delete the config files inside `/home/print3D/printer_data/config/`
   
 - Download the configuration files:
   ```bash
