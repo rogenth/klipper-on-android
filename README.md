@@ -90,7 +90,7 @@ I installed Klipper succesfully on my Pixel 5 with the tutorial from gaifeng8864
     - Make sure Octo4a sees your printer (it will be listed with a checked-box next to it).
       - There will be a prompt in your android device asking for permission to connect to your printer if detected.
     - `/data/data/com.octo4a/files/serialpipe` is the serial port you need to use in your `printer.cfg`
-    - Modify later `start-klipper-container` from the Termux root directory and add `command+=" -b /data/data/com.octo4a/files:/data/data/com.octo4a/files"` around the `#uncomment` section in order to mount the implementation of Octo4a into the Debian/Klipper container.
+    - Modify later `start-klipper-container` from the Termux root directory and add `command+=" -b /data/data/com.octo4a/files"` around the `#uncomment` section in order to mount the implementation of Octo4a into the Debian/Klipper container.
     
 - Make the serial device accessible to Klipper (on both Termux and Debian Container):
     ```bash
