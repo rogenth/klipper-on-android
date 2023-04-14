@@ -9,5 +9,5 @@
 export DISPLAY=:0 
 sleep 10
 /usr/local/bin/xterm &
-#telegram bot
-/etc/init.d/telegram start
+##uncomment for telegram bot
+#/etc/init.d/telegram start
